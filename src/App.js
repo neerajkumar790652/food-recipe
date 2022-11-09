@@ -14,8 +14,8 @@ function App() {
    const [search,setSearch] =useState('');
     const [query,setQuery] = useState('chicken');
   useEffect(()=>{
-    getRecipe();
-  }, []); // add array if required
+    getRecipe(query);
+  }, [query]); // add array if required
   const getRecipe = async()=>{
     const response = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
   setRecipe(response.data.hits);
