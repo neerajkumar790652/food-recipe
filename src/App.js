@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import SearchIcon from '@mui/icons-material/Search';
 function App() {
-  const APP_ID ="030eb585";
+  const APPID ="030eb585";
   const APP_KEY ="02bb0260ca8a0cbd44053e6692b1efc5";
    const [recipe,setRecipe]=useState([]);
    const [search,setSearch] =useState('');
@@ -18,7 +18,7 @@ function App() {
     //eslint-disable-next-line
   }, [query]); // add array if required
   const getRecipe = async()=>{
-    const response = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+    const response = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${APPID}&app_key=${APP_KEY}`);
   setRecipe(response.data.hits);
   // console.log(response.data.hits);
   };
