@@ -32,7 +32,7 @@ const Recipe = ({title,image,ingredients}) => {
          <Card sx={{ maxWidth: 345,marginTop:'40px'}}>
       <CardHeader style={{height:50}}
         title={title}
-        // subheader={calories}
+        
       />
       <CardMedia
         component="img"
